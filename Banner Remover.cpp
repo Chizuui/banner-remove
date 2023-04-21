@@ -90,7 +90,7 @@ int main()
 
     if (procId) {
         hProcess = OpenProcess(PROCESS_ALL_ACCESS, NULL, procId);
-        //std::cout << "Successfully attached to the process." << std::endl;
+        std::cout << "Successfully attached to the process." << std::endl;
 
         // Perform operations on the attached process here
         uintptr_t address1 = GetModuleBaseAddress(procId, L"mhyprot.dll") + 0x377064;
